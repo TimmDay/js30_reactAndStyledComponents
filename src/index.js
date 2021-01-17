@@ -11,10 +11,11 @@ import LookupApp from './components/06FetchAndLookup/LookupApp'
 import CanvasApp from './components/08HTML5Canvas/CanvasApp'
 import ShiftCheckApp from './components/10HoldShiftChecks/ShiftCheckApp'
 import VideoApp from './components/11VideoPlayer/VideoApp'
+import StyledKeySequenceApp from './components/12KeySequence/KeySequenceApp'
 
 ReactDOM.render(
   <React.StrictMode>
-    <VideoApp />
+    <StyledKeySequenceApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

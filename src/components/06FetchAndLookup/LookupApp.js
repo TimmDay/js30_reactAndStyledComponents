@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 `
-
 const StyledLookupApp = styled.form` 
   max-width: 400px;
   margin: 50px auto;
@@ -26,7 +25,6 @@ const StyledLookupApp = styled.form`
     font-size: 15px;
   }
 `
-
 const StyledInput = styled.input`
   width: 100%;
   padding: 20px;
@@ -44,7 +42,6 @@ const StyledInput = styled.input`
   font-size: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
 `
-
 const StyledUl = styled.ul`
   margin: 0;
   padding: 0;
