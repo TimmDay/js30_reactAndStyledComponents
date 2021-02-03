@@ -74,6 +74,51 @@ Must use useRef hook to give the listener handle functions access to the current
 Array.prototype.indexOf.call(nodelist, el)
 useRef hook again in eventlistener that is set on initial render
 
+# 11
+
+# 12
+
+# 13
+
+# 14
+
+ways to copy an array (since references to an array are mutable) that leave original array untouched
+const arr1 = [1,2,3,4,5]
+const arr2 = arr1.slice()
+const arr3 = [].concat(arr1)
+const arr4 = [...arr1]
+const arr5 = Array.from(arr1)
+arrX[1] = 'XXX' //original arr1 is ok
+
+ways to copy obj that leave original immuted
+const person = {
+name: 'Tim',
+age: 32
+}
+const p2 = Object.assign({}, person, { number: 99, age: 12})
+const p3 = {...person, fruit: 'banana'}
+const p4 = {...person, age: 666, fruit: 'banana'} // same prop again after spreading will override in the copy
+
+NOTE: shallow! only ever one level deep
+const fruits = {
+type: 'tree',
+fruit1: {
+name: 'apple',
+num: 3
+}
+}
+const f2 = {...fruits}
+f2.fruit1.num = 7
+// OHNO! also changes fruits.fruit1.num
+only goes 1 level deep
+
+look up cloneDeep online, or hack way
+
+const f3 = JSON.parse(JSON.stringify(fruits))
+f3.fruit1.num = 99
+
+// JSON parse and stringify will turn the obj into a string (new ref) and then back into an obj - kills any refs to original obj
+
 ### `yarn start`
 
 Runs the app in the development mode.\
